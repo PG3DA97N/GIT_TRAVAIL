@@ -1,0 +1,60 @@
+# les dossiers Linux
+
+# les fichiers calssiques
+# (.txt, .odt, .doc)
+# les fichiers spéciaux: Certains fichiers sont spéciaux car ils représentent quelque choase pour linux. 
+# par exempel le lecteur CD représente un fichier pour linux. Là ou windows fait la distinction entre ce qui ne l'est pas,
+# Linux lui dit que tout est un fichier. C'est une conception un peu différente et un peu déroutante.
+
+# la racine / on ne peut pas remonter plus loin. 
+ls / 
+
+
+# bin contient des programmes executables suceptibles d'être utilisés par tous les utilisateurs de la machine.
+# boot: fichiers permettant le démarrage de Linux.
+# dev: fichiers contenant les périphériques. En fait - on en reparlera plus tard - ce dossier contient des sous-dossiers 
+# qui représentent chacun un périphériques on y trouve ainsi par exemple le fichier qui représentent chacun un périphérique. 
+# On y retrouve ainsi par exemple le fichier qui représente le lecteur CD.
+# etc: fichier de configuration.
+# home:répertoires personnels des utilisateurs. On en a déjà parlé un peu avant: c'est dans ce dossier que vous placerez 
+# vos fichiers personnels, à la manière du dossier Mes documents de Windows.
+# lib : dossier contenant les bibliothèques partégées (généralement des fichiers .so) 
+# utilisées par les programmes. C'est en fait là qu'on trouve l'équivalent des .dll de windows. 
+# media: lorsqu'un périphérique amovible (comme un carte mémoire SD ou un clé USB) est inséré dans votre ordinateur, Linux
+# vous permet d'y accéder à partir d'un sous-dossier de media. On parle de montage.
+# mnt: c'est un peu pareil que media, mais pour un usag plus temporaire. 
+# opt: repertoire utilisé pour les add-ons de programmes.
+# proc: contient des informations système.
+# root:c'est le dossier personnel de l'utilisateur "root". Normalement, les dossiers personnels sont placé dans homme
+# mais celui de "root" est le superutilisateur, le "chef" de la machine en quelque sorte. Il a droit à un espace spécial.
+# sbin: contient des programmes importants. 
+# tmp: dossier temporaire utilisé par les programmes pour stocker des fichiers.
+# usr: c'est un des plus gros dossiers dans lequel vont s'installer la plupart des programmes demandés par l'utilisateur
+# var : ce dossier contient des données "variables", souvent des logs (traces écrites de ce qui s'est passé récemment sur l'ordinateur)
+
+
+pwd # indique l'emplacement ou l'on est 
+which # indique le lieu ou ce situe une commande.
+ls # liste les fichiers et repertoire. 
+--color=auto
+ls --color=auto
+--color=none.
+ls -a : afficher tous les fichiers et dossiers  cachés. 
+ls -F : indique le type d'élément  '
+ls -l : indique la liste des fichiers
+ls -lh: affiche une taille de fichier plus lisible 
+ls -lt: permet de trier par date de dernière modification
+ls -l -t -r: qui permet de renverser l'ordre d'affichage.
+ls -larth : qui permet de combiner les commandes précédentes
+ls -larthF: qui permet de combiner les commandes précédentes
+cd ../..: revient en arrière de deux dossiers. 
+
+Retour au répertoire homme. 
+cd ~
+cd 
+
+du taille occupé par les dossiers. 
+du -h affiche la taille du dossier en Octet. 
+du -ah: affiche la taille du dossier en Octet et ces fichiers.
+du -sh: n'avoir que les l'espace total occupé par le dossier et donc ne pas afficher les détail
+des sous-dossier, utilisez -s (que je combine à -h pour plus de lisibilité)
