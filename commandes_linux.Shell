@@ -58,3 +58,85 @@ du -h affiche la taille du dossier en Octet.
 du -ah: affiche la taille du dossier en Octet et ces fichiers.
 du -sh: n'avoir que les l'espace total occupé par le dossier et donc ne pas afficher les détail
 des sous-dossier, utilisez -s (que je combine à -h pour plus de lisibilité)
+
+Les commandes Linux 
+
+Manipulation des fichiers. 
+
+#lire des fichiers
+commandes cat et less
+
+cat + nom du fichier affiche le contenu du fichier 
+less +nom du fichier affihe le contenu du fichier page par page
+
+pour sortir appuyer sur : et sur q
+
+d : affiche les onze lignes suivantes (soit une moitié d'écran). C'est un peu l'intermédiaire entreEspace(tout un écran) etEntrée(une seule ligne).
+b : retourne en arrière d'un écran.
+Vous pouvez aussi appuyer sur la touchePage Up.
+y : retourne d'une ligne en arrière.
+
+avec la commande less.
+    = : indique où vous en êtes dans le fichier (numéro des lignes affichées et pourcentage).
+
+    h : affiche l'aide (toutes les commandes que je vous apprends ici, je les tire de là). Tapezqpour sortir de l'aide.
+
+    / : tapez/suivi du texte que vous recherchez pour lancer le mode recherche. FaitesEntréepour valider. Pour ceux qui savent s'en servir, sachez que les expressions régulières sont acceptées. Je ne vais pas vous faire un cours sur les expressions régulières ici, ce serait trop long, mais il y en a un dans mon cours sur le PHP Concevez votre site Web avec PHP et MySQL dans la même collection.
+
+    n : après avoir fait une recherche avec/, la touchenvous permet d'aller à la prochaine occurrence de votre recherche. C'est un peu comme si vous cliquiez sur le bouton « Résultat suivant ».
+
+    N : pareil quen, mais pour revenir en arrière.
+
+ head + nom du fichier affiche les premières lignes d'un fichier. 
+ tail + nom du fichier affiche les dernières lignes d'un fichier.
+ head -n 3 + nom du fichier affiche les 3 premières lignes du fichier.
+ tail -n 3 + nom du fichier affiche les 3 dernières lignes du fichier.  
+
+l ''option -f
+
+#cette option ordonne à tail de suivre le fichier au fur et a mesure de son évolution. 
+#Ctrl + C pour arrête la commande tail. 
+#À connaître : la combinaison de touchesCtrl + Cest utilisable dans la plupart des programmes console pour demander leur arrêt. C''est un peu l''équivalent duAlt + F4de Windows.
+
+tail -f -s 3 affichera les changement toutes les 3 secondes et non pas toutes les secondes. 
+
+#créer un fichier
+touch + nom de fichier 
+touch fichierbidon fichierbidon.txt crée deux fichiers
+touch "fichier bidon" les "" permettent de créer avec des espaces. 
+
+#créer un dossier 
+mkdir mondossier autresDossier  crée deux dossiers. 
+mkdir -p animaux/vertebres/chat #l option p permet de créer les sous dossier animaux puis vertebres puis chat. 
+
+#copier et déplacer des fichiers
+cp fichierbidon mondossier/copie  copie fichier bidon dans mon dossier sous le nom copie.
+cp fichierbidon /var/log/         copiera fichier bidon dans le dossier/var/log
+
+#Copier un dossier avec tous les fichiers qu il contient
+
+#Utiliser l'option -R avec cp
+#exemple on va copier le dossier Cours_Linux dans Documents/OpenclasseRoom et on va le renommer 2Cours_Linux
+cp -R "Documents/OpenclasseRoom/Cours_Linux"  "Documents/OpenclasseRoom/2Cours_Linux"
+
+# Utiliser un joker déplacer et renomer un fichier.
+#Le symbole * est utilisé comme jocker il permet par exemple de copier tous les fichiers jpg
+cp Documents/OpenclasseRoom/2Cours_Linux/*.jpg "Documents/OpenclasseRoom/Cours_Linux/" 
+#ici on copie colle tous les documents qui commenceent pas R
+cp Documents/OpenclasseRoom/2Cours_Linux/r* "Documents/OpenclasseRoom/Cours_Linux/" 
+mv *.jpg mondossier/
+
+# Déplacer et rennomer un fichier 
+# Déplacer
+mv "Documents/OpenclasseRoom/2Cours_Linux/rtttteeee.jpg" "Documents/OpenclasseRoom/Cours_Linux/rtttteeee.jpg"
+# Rennomer un fichier 
+mv "Documents/OpenclasseRoom/2Cours_Linux/rtttteeee.jpg"  "Documents/OpenclasseRoom/2Cours_Linux/rto.jpg"
+
+# RM supprimer des dossiers et des fichiers.
+rm "Documents/OpenclasseRoom/2Cours_Linux/rtttteeee.jpg"
+rm Documents/OpenclasseRoom/2Cours_Linux/r* # Note les "" ne sutilise pas avec le joker
+# -i demander confirmation on tape o ou n pour signifier oui ou non. 
+rm -i Documents/OpenclasseRoom/2Cours_Linux/r*
+rm -R supprime un dossier
+
+
