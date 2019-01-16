@@ -137,6 +137,12 @@ rm "Documents/OpenclasseRoom/2Cours_Linux/rtttteeee.jpg"
 rm Documents/OpenclasseRoom/2Cours_Linux/r* # Note les "" ne sutilise pas avec le joker
 # -i demander confirmation on tape o ou n pour signifier oui ou non. 
 rm -i Documents/OpenclasseRoom/2Cours_Linux/r*
-rm -R supprime un dossier
+rm -R #supprime un dossier et son contenu
+rm -f fichierbidon.txt #forcer la suppression
+rm -v fichierbidon.txt # demande à la commande ce qu'elle est en train de faire.
+rmdir Documents/OpenclasseRoom/2Cours_Linux/ #ne supprime un dossier que s'il est vide.
+rm -rf /* # a ne jamais utiliser supprime tous les dossier et fichier qui se trouvent à la racine en forcant la suppression.
+
+
 
 
