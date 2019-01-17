@@ -1,147 +1,155 @@
-# les dossiers Linux
+	# les dossiers Linux
 
-# les fichiers calssiques
-# (.txt, .odt, .doc)
-# les fichiers spéciaux: Certains fichiers sont spéciaux car ils représentent quelque choase pour linux. 
-# par exempel le lecteur CD représente un fichier pour linux. Là ou windows fait la distinction entre ce qui ne l'est pas,
-# Linux lui dit que tout est un fichier. C'est une conception un peu différente et un peu déroutante.
+	# les fichiers calssiques
+	# (.txt, .odt, .doc)
+	# les fichiers spéciaux: Certains fichiers sont spéciaux car ils représentent quelque choase pour linux. 
+	# par exempel le lecteur CD représente un fichier pour linux. Là ou windows fait la distinction entre ce qui ne l'est pas,
+	# Linux lui dit que tout est un fichier. C'est une conception un peu différente et un peu déroutante.
 
-# la racine / on ne peut pas remonter plus loin. 
-ls / 
-
-
-# bin contient des programmes executables suceptibles d'être utilisés par tous les utilisateurs de la machine.
-# boot: fichiers permettant le démarrage de Linux.
-# dev: fichiers contenant les périphériques. En fait - on en reparlera plus tard - ce dossier contient des sous-dossiers 
-# qui représentent chacun un périphériques on y trouve ainsi par exemple le fichier qui représentent chacun un périphérique. 
-# On y retrouve ainsi par exemple le fichier qui représente le lecteur CD.
-# etc: fichier de configuration.
-# home:répertoires personnels des utilisateurs. On en a déjà parlé un peu avant: c'est dans ce dossier que vous placerez 
-# vos fichiers personnels, à la manière du dossier Mes documents de Windows.
-# lib : dossier contenant les bibliothèques partégées (généralement des fichiers .so) 
-# utilisées par les programmes. C'est en fait là qu'on trouve l'équivalent des .dll de windows. 
-# media: lorsqu'un périphérique amovible (comme un carte mémoire SD ou un clé USB) est inséré dans votre ordinateur, Linux
-# vous permet d'y accéder à partir d'un sous-dossier de media. On parle de montage.
-# mnt: c'est un peu pareil que media, mais pour un usag plus temporaire. 
-# opt: repertoire utilisé pour les add-ons de programmes.
-# proc: contient des informations système.
-# root:c'est le dossier personnel de l'utilisateur "root". Normalement, les dossiers personnels sont placé dans homme
-# mais celui de "root" est le superutilisateur, le "chef" de la machine en quelque sorte. Il a droit à un espace spécial.
-# sbin: contient des programmes importants. 
-# tmp: dossier temporaire utilisé par les programmes pour stocker des fichiers.
-# usr: c'est un des plus gros dossiers dans lequel vont s'installer la plupart des programmes demandés par l'utilisateur
-# var : ce dossier contient des données "variables", souvent des logs (traces écrites de ce qui s'est passé récemment sur l'ordinateur)
+	# la racine / on ne peut pas remonter plus loin. 
+	ls / 
 
 
-pwd # indique l'emplacement ou l'on est 
-which # indique le lieu ou ce situe une commande.
-ls # liste les fichiers et repertoire. 
---color=auto
-ls --color=auto
---color=none.
-ls -a : afficher tous les fichiers et dossiers  cachés. 
-ls -F : indique le type d'élément  '
-ls -l : indique la liste des fichiers
-ls -lh: affiche une taille de fichier plus lisible 
-ls -lt: permet de trier par date de dernière modification
-ls -l -t -r: qui permet de renverser l'ordre d'affichage.
-ls -larth : qui permet de combiner les commandes précédentes
-ls -larthF: qui permet de combiner les commandes précédentes
-cd ../..: revient en arrière de deux dossiers. 
+	# bin contient des programmes executables suceptibles d'être utilisés par tous les utilisateurs de la machine.
+	# boot: fichiers permettant le démarrage de Linux.
+	# dev: fichiers contenant les périphériques. En fait - on en reparlera plus tard - ce dossier contient des sous-dossiers 
+	# qui représentent chacun un périphériques on y trouve ainsi par exemple le fichier qui représentent chacun un périphérique. 
+	# On y retrouve ainsi par exemple le fichier qui représente le lecteur CD.
+	# etc: fichier de configuration.
+	# home:répertoires personnels des utilisateurs. On en a déjà parlé un peu avant: c'est dans ce dossier que vous placerez 
+	# vos fichiers personnels, à la manière du dossier Mes documents de Windows.
+	# lib : dossier contenant les bibliothèques partégées (généralement des fichiers .so) 
+	# utilisées par les programmes. C'est en fait là qu'on trouve l'équivalent des .dll de windows. 
+	# media: lorsqu'un périphérique amovible (comme un carte mémoire SD ou un clé USB) est inséré dans votre ordinateur, Linux
+	# vous permet d'y accéder à partir d'un sous-dossier de media. On parle de montage.
+	# mnt: c'est un peu pareil que media, mais pour un usag plus temporaire. 
+	# opt: repertoire utilisé pour les add-ons de programmes.
+	# proc: contient des informations système.
+	# root:c'est le dossier personnel de l'utilisateur "root". Normalement, les dossiers personnels sont placé dans homme
+	# mais celui de "root" est le superutilisateur, le "chef" de la machine en quelque sorte. Il a droit à un espace spécial.
+	# sbin: contient des programmes importants. 
+	# tmp: dossier temporaire utilisé par les programmes pour stocker des fichiers.
+	# usr: c'est un des plus gros dossiers dans lequel vont s'installer la plupart des programmes demandés par l'utilisateur
+	# var : ce dossier contient des données "variables", souvent des logs (traces écrites de ce qui s'est passé récemment sur l'ordinateur)
 
-Retour au répertoire homme. 
-cd ~
-cd 
 
-du taille occupé par les dossiers. 
-du -h affiche la taille du dossier en Octet. 
-du -ah: affiche la taille du dossier en Octet et ces fichiers.
-du -sh: n'avoir que les l'espace total occupé par le dossier et donc ne pas afficher les détail
-des sous-dossier, utilisez -s (que je combine à -h pour plus de lisibilité)
+	pwd # indique l'emplacement ou l'on est 
+	which # indique le lieu ou ce situe une commande.
+	ls # liste les fichiers et repertoire. 
+	--color=auto
+	ls --color=auto
+	--color=none.
+	ls -a : afficher tous les fichiers et dossiers  cachés. 
+	ls -F : indique le type d'élément  '
+	ls -l : indique la liste des fichiers
+	ls -lh: affiche une taille de fichier plus lisible 
+	ls -lt: permet de trier par date de dernière modification
+	ls -l -t -r: qui permet de renverser l'ordre d'affichage.
+	ls -larth : qui permet de combiner les commandes précédentes
+	ls -larthF: qui permet de combiner les commandes précédentes
+	cd ../..: revient en arrière de deux dossiers. 
 
-Les commandes Linux 
+	Retour au répertoire homme. 
+	cd ~
+	cd 
 
-Manipulation des fichiers. 
+	du taille occupé par les dossiers. 
+	du -h affiche la taille du dossier en Octet. 
+	du -ah: affiche la taille du dossier en Octet et ces fichiers.
+	du -sh: n'avoir que les l'espace total occupé par le dossier et donc ne pas afficher les détail
+	des sous-dossier, utilisez -s (que je combine à -h pour plus de lisibilité)
 
-#lire des fichiers
-commandes cat et less
+	Les commandes Linux 
 
-cat + nom du fichier affiche le contenu du fichier 
-less +nom du fichier affihe le contenu du fichier page par page
+	Manipulation des fichiers. 
 
-pour sortir appuyer sur : et sur q
+	#lire des fichiers
+	commandes cat et less
 
-d : affiche les onze lignes suivantes (soit une moitié d'écran). C'est un peu l'intermédiaire entreEspace(tout un écran) etEntrée(une seule ligne).
-b : retourne en arrière d'un écran.
-Vous pouvez aussi appuyer sur la touchePage Up.
-y : retourne d'une ligne en arrière.
+	cat + nom du fichier affiche le contenu du fichier 
+	less +nom du fichier affihe le contenu du fichier page par page
 
-avec la commande less.
-    = : indique où vous en êtes dans le fichier (numéro des lignes affichées et pourcentage).
+	pour sortir appuyer sur : et sur q
 
-    h : affiche l'aide (toutes les commandes que je vous apprends ici, je les tire de là). Tapezqpour sortir de l'aide.
+	d : affiche les onze lignes suivantes (soit une moitié d'écran). C'est un peu l'intermédiaire entreEspace(tout un écran) etEntrée(une seule ligne).
+	b : retourne en arrière d'un écran.
+	Vous pouvez aussi appuyer sur la touchePage Up.
+	y : retourne d'une ligne en arrière.
 
-    / : tapez/suivi du texte que vous recherchez pour lancer le mode recherche. FaitesEntréepour valider. Pour ceux qui savent s'en servir, sachez que les expressions régulières sont acceptées. Je ne vais pas vous faire un cours sur les expressions régulières ici, ce serait trop long, mais il y en a un dans mon cours sur le PHP Concevez votre site Web avec PHP et MySQL dans la même collection.
+	avec la commande less.
+        = : indique où vous en êtes dans le fichier (numéro des lignes affichées et pourcentage).
 
-    n : après avoir fait une recherche avec/, la touchenvous permet d'aller à la prochaine occurrence de votre recherche. C'est un peu comme si vous cliquiez sur le bouton « Résultat suivant ».
+	    h : affiche l'aide (toutes les commandes que je vous apprends ici, je les tire de là). Tapezqpour sortir de l'aide.
 
-    N : pareil quen, mais pour revenir en arrière.
+	    / : tapez/suivi du texte que vous recherchez pour lancer le mode recherche. FaitesEntréepour valider. Pour ceux qui savent s'en servir, sachez que les expressions régulières sont acceptées. Je ne vais pas vous faire un cours sur les expressions régulières ici, ce serait trop long, mais il y en a un dans mon cours sur le PHP Concevez votre site Web avec PHP et MySQL dans la même collection.
 
- head + nom du fichier affiche les premières lignes d'un fichier. 
- tail + nom du fichier affiche les dernières lignes d'un fichier.
- head -n 3 + nom du fichier affiche les 3 premières lignes du fichier.
- tail -n 3 + nom du fichier affiche les 3 dernières lignes du fichier.  
+	    n : après avoir fait une recherche avec/, la touchenvous permet d'aller à la prochaine occurrence de votre recherche. C'est un peu comme si vous cliquiez sur le bouton « Résultat suivant ».
 
-l ''option -f
+	    N : pareil quen, mais pour revenir en arrière.
 
-#cette option ordonne à tail de suivre le fichier au fur et a mesure de son évolution. 
-#Ctrl + C pour arrête la commande tail. 
-#À connaître : la combinaison de touchesCtrl + Cest utilisable dans la plupart des programmes console pour demander leur arrêt. C''est un peu l''équivalent duAlt + F4de Windows.
+	 head + nom du fichier affiche les premières lignes d'un fichier. 
+	 
+	 tail + nom du fichier affiche les dernières lignes d'un fichier.
+	 head -n 3 + nom du fichier affiche les 3 premières lignes du fichier.
+	 tail -n 3 + nom du fichier affiche les 3 dernières lignes du fichier.  
 
-tail -f -s 3 affichera les changement toutes les 3 secondes et non pas toutes les secondes. 
 
-#créer un fichier
-touch + nom de fichier 
-touch fichierbidon fichierbidon.txt crée deux fichiers
-touch "fichier bidon" les "" permettent de créer avec des espaces. 
 
-#créer un dossier 
-mkdir mondossier autresDossier  crée deux dossiers. 
-mkdir -p animaux/vertebres/chat #l option p permet de créer les sous dossier animaux puis vertebres puis chat. 
 
-#copier et déplacer des fichiers
-cp fichierbidon mondossier/copie  copie fichier bidon dans mon dossier sous le nom copie.
-cp fichierbidon /var/log/         copiera fichier bidon dans le dossier/var/log
+	 
 
-#Copier un dossier avec tous les fichiers qu il contient
+	l ''option -f
 
-#Utiliser l'option -R avec cp
-#exemple on va copier le dossier Cours_Linux dans Documents/OpenclasseRoom et on va le renommer 2Cours_Linux
-cp -R "Documents/OpenclasseRoom/Cours_Linux"  "Documents/OpenclasseRoom/2Cours_Linux"
+	#cette option ordonne à tail de suivre le fichier au fur et a mesure de son évolution. 
+	#Ctrl + C pour arrête la commande tail. 
+	#À connaître : la combinaison de touchesCtrl + Cest utilisable dans la plupart des programmes console pour demander leur arrêt. C''est un peu l''équivalent duAlt + F4de Windows.
 
-# Utiliser un joker déplacer et renomer un fichier.
-#Le symbole * est utilisé comme jocker il permet par exemple de copier tous les fichiers jpg
-cp Documents/OpenclasseRoom/2Cours_Linux/*.jpg "Documents/OpenclasseRoom/Cours_Linux/" 
-#ici on copie colle tous les documents qui commenceent pas R
-cp Documents/OpenclasseRoom/2Cours_Linux/r* "Documents/OpenclasseRoom/Cours_Linux/" 
-mv *.jpg mondossier/
+	tail -f -s 3 affichera les changement toutes les 3 secondes et non pas toutes les secondes. 
 
-# Déplacer et rennomer un fichier 
-# Déplacer
-mv "Documents/OpenclasseRoom/2Cours_Linux/rtttteeee.jpg" "Documents/OpenclasseRoom/Cours_Linux/rtttteeee.jpg"
-# Rennomer un fichier 
-mv "Documents/OpenclasseRoom/2Cours_Linux/rtttteeee.jpg"  "Documents/OpenclasseRoom/2Cours_Linux/rto.jpg"
+	#créer un fichier
+	touch + nom de fichier 
+	touch fichierbidon fichierbidon.txt crée deux fichiers
+	touch "fichier bidon" les "" permettent de créer avec des espaces. 
 
-# RM supprimer des dossiers et des fichiers.
-rm "Documents/OpenclasseRoom/2Cours_Linux/rtttteeee.jpg"
-rm Documents/OpenclasseRoom/2Cours_Linux/r* # Note les "" ne sutilise pas avec le joker
-# -i demander confirmation on tape o ou n pour signifier oui ou non. 
-rm -i Documents/OpenclasseRoom/2Cours_Linux/r*
-rm -R #supprime un dossier et son contenu
-rm -f fichierbidon.txt #forcer la suppression
-rm -v fichierbidon.txt # demande à la commande ce qu'elle est en train de faire.
-rmdir Documents/OpenclasseRoom/2Cours_Linux/ #ne supprime un dossier que s'il est vide.
-rm -rf /* # a ne jamais utiliser supprime tous les dossier et fichier qui se trouvent à la racine en forcant la suppression.
+	#créer un dossier 
+	mkdir mondossier autresDossier  crée deux dossiers. 
+	mkdir -p animaux/vertebres/chat #l option p permet de créer les sous dossier animaux puis vertebres puis chat. 
+
+	#copier et déplacer des fichiers
+	cp fichierbidon mondossier/copie  copie fichier bidon dans mon dossier sous le nom copie.
+	cp fichierbidon /var/log/         copiera fichier bidon dans le dossier/var/log
+
+	#Copier un dossier avec tous les fichiers qu il contient
+
+	#Utiliser l'option -R avec cp
+	#exemple on va copier le dossier Cours_Linux dans Documents/OpenclasseRoom et on va le renommer 2Cours_Linux
+	cp -R "Documents/OpenclasseRoom/Cours_Linux"  "Documents/OpenclasseRoom/2Cours_Linux"
+
+	# Utiliser un joker déplacer et renomer un fichier.
+	#Le symbole * est utilisé comme jocker il permet par exemple de copier tous les fichiers jpg
+	cp Documents/OpenclasseRoom/2Cours_Linux/*.jpg "Documents/OpenclasseRoom/Cours_Linux/" 
+	#ici on copie colle tous les documents qui commenceent pas R
+	cp Documents/OpenclasseRoom/2Cours_Linux/r* "Documents/OpenclasseRoom/Cours_Linux/" 
+	mv *.jpg mondossier/
+
+	# Déplacer et rennomer un fichier 
+	# Déplacer
+	mv "Documents/OpenclasseRoom/2Cours_Linux/rttPtteeee.jpg" "Documents/OpenclasseRoom/Cours_Linux/rtttteeee.jpg"
+	# Rennomer un fichier 
+	mv "Documents/OpenclasseRoom/2Cours_Linux/rtttteeee.jpg"  "Documents/OpenclasseRoom/2Cours_Linux/rto.jpg"
+
+	# RM supprimer des dossiers et des fichiers.
+	rm "Documents/OpenclasseRoom/2Cours_Linux/rtttteeee.jpg"
+	rm Documents/OpenclasseRoom/2Cours_Linux/r* # Note les "" ne sutilise pas avec le joker
+	# -i demander confirmation on tape o ou n pour signifier oui ou non. 
+	rm -i Documents/OpenclasseRoom/2Cours_Linux/r*
+	rm -R #supprime un dossier et son contenu
+	rm -f fichierbidon.txt #forcer la suppression
+	rm -v fichierbidon.txt # demande à la commande ce qu'elle est en train de faire.
+	rmdir Documents/OpenclasseRoom/2Cours_Linux/ #ne supprime un dossier que s'il est vide.
+	rm -rf /* # a ne jamais utiliser supprime tous les dossier et fichier qui se trouvent à la racine en forcant la suppression.
+
+
 
 
 
